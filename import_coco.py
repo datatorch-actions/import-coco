@@ -1,8 +1,7 @@
 import os
 import sys
-from sys import path
 import numpy as np
-from typing import Counter, List
+from typing import List
 from pycocotools.coco import COCO
 
 from datatorch import get_inputs
