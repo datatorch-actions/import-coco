@@ -2,18 +2,11 @@ $schema: http://datatorch.io/schema/action.v1.json
 
 name: Import COCO
 description: Imports annotation in COCO formation into DataTorch
-
 inputs:
   path:
     type: string
     required: true
     description: Absolute path to the coco file
-  preserveIds:
-    type: boolean
-    default: false
-    description: >
-      Write the ids of created annotations back to the coco file to stop
-      duplicates from occurring if the file was to be imported again.
   bbox:
     type: boolean
     default: false
@@ -22,20 +15,25 @@ inputs:
     type: boolean
     default: true
     description: Create segmentation annotations.
-  projectId:
+  project:
     type: string
     default: ${{ pipeline.projectId }}
     description: >
-      Id of the project to import these annotations into. This will default to
-      the flows project if not set.
+      Id or namespace of the project to import the annotations into. This will
+      default to the flows project if not set.
   maxIou:
     type: float
     default: 0.99
     description: >
       If an annotation exists on the file with an union over intersection of the
       annotation about to be imported, the annotation will not be imported. Set
-      to `-1` to disable.
-
+      to 0 to disable. Disabling can significantly increase performance.
+  simplify:
+    type: float
+    default: 1.0
+    description: >
+      Simplification tolerance applied to coco segmentations before importing.
+      Set to 0 to disable. Disabling can significantly increase performance.
 runs:
   using: python
   main: import_coco.py
