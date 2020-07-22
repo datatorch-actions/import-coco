@@ -1,4 +1,4 @@
-from datatorch.api.scripts.simplify import import_coco
+from datatorch.api.scripts.import_coco
 from datatorch import get_inputs
 
 if __name__ == "__main__":
@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     # Call the importer already built into the python SDK at
     # `datatorch import coco <args>`
-    import_coco(
+    import_coco.import_coco(
         file_path,
         project,
         import_bbox=import_bbox,
