@@ -19,8 +19,8 @@ inputs:
     type: string
     default: ${{ pipeline.projectId }}
     description: >
-      Id or namespace of the project to import the annotations into. This will
-      default to the flows project if not set.
+      Id or namespace and slug of the project to import the annotations into. This
+      will default to the flows project if not set.
   maxIou:
     type: float
     default: 0.99
