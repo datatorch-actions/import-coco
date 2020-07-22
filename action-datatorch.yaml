@@ -30,7 +30,7 @@ inputs:
       to 0 to disable. Disabling can significantly increase performance.
   simplify:
     type: float
-    default: 1.0
+    default: 0.5
     description: >
       Simplification tolerance applied to coco segmentations before importing.
       Set to 0 to disable. Disabling can significantly increase performance.
