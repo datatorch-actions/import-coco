@@ -1,4 +1,4 @@
-from datatorch.api.scripts.import_coco import import_coco
+from datatorch.api.scripts.simplify import import_coco
 from datatorch import get_inputs
 
 if __name__ == "__main__":
