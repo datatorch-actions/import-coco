@@ -8,6 +8,7 @@ if __name__ == "__main__":
     import_segmentation: bool = get_inputs("segmentation")
     max_iou: float = get_inputs("maxIou")
     simplify: float = get_inputs("simplify")
+    ignore_annotations_with_ids: bool = get_inputs("ignoreAnnotationsWithIds")
 
     # Call the importer already built into the python SDK at
     # `datatorch import coco <args>`
@@ -18,4 +19,5 @@ if __name__ == "__main__":
         import_segmentation=import_segmentation,
         max_iou=max_iou,
         simplify_tolerance=simplify,
+        ignore_annotations_with_ids=ignore_annotations_with_ids
     )
