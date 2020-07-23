@@ -34,6 +34,10 @@ inputs:
     description: >
       Simplification tolerance applied to coco segmentations before importing.
       Set to 0 to disable. Disabling can significantly increase performance.
+  ignoreAnnotationsWithIds:
+    type: boolean
+    default: true
+    description: Annotations with the property 'datatorch_id' will be ignored.
 runs:
   using: python
   main: import_coco.py
