@@ -1,7 +1,7 @@
 $schema: http://datatorch.io/schema/action.v1.json
 
 name: Import COCO
-description: Imports annotation in COCO formation into DataTorch
+description: Imports annotation in COCO format into a DataTorch Project. Files are are matched by name.
 inputs:
   path:
     type: string
